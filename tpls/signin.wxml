@@ -1,0 +1,10 @@
+<template name="signItem">
+  <view>
+    <modal title="重新登录" confirm-text="确认" cancel-text="取消" hidden="{{signinHide}}" bindconfirm="actionConfirm" bindCancle="actionCancle">
+		<label>
+			<input type="text" placeholder="请输入用户名" value="{{username}}" />
+			<input type="text" placeholder="请输入密码" value="{{password}}" password="true" />
+		</label>	
+    </modal>
+  </view> 
+</template>

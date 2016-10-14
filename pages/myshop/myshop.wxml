@@ -1,0 +1,7 @@
+<!--myshop.wxml-->
+
+<import src="/tpls/signin.wxml" />
+
+<template is="signItem" data="{{signinHide, ...userinfo}}" />
+
+<view>signItem</view>

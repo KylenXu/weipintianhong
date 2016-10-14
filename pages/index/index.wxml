@@ -1,0 +1,55 @@
+<!-- idnex.wxml -->
+<view class="container">
+	<!-- <loading hidden="{{loadingHidden}}" bindtap="loadingChange">
+	    加载中...
+	</loading> -->
+	<scroll-view scroll-y="true" id="main_scroll" class="container publicContainer"   bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="{{scroll[upper-threshold]}}" lower-threshold="{{scroll['lower-threshold']}">
+		<view class="index-module banner-module">
+			<!-- <button loading="true">努力刷新中...</button> -->
+		  	<swiper class="banner" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+		  		<block wx:for="{{homeinit.Layouts[0].LayoutItems}}">
+	  				<swiper-item>
+	  					<navigator url="{{item.Url}}">
+		  					<image mode="aspectFill" class="img" src="{{item.Img_url}}" width="355" height="150"/>
+		  				</navigator>
+	  				</swiper-item>
+		  		</block>
+		 	</swiper>
+		 	<view class="publicContainer">
+		 		<image mode="aspectFit" src="/images/ic_notice.png"></image>
+		 		<text>天虹微品【微零售】全新模式即将开启！</text>
+		 	</view>
+	 	</view>	
+
+	 	<view class="index-module typeNav">
+	 		<nav class="publicContainer">
+		 		<block wx:for="{{typeNav}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.typeImgUrl}}"></image>
+		 				<text>{{item.typeTil}}</text>
+		 			</li>
+		 		</block>
+	 		</nav>
+	 	</view>
+
+	 	<view class="index-module partener">
+	 		<nav class="publicContainer">
+		 		<block wx:for="{{proUrls.partenerUrl}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item}}"></image>
+		 			</li>
+		 		</block>
+	 		</nav>
+	 	</view>d
+
+	 	<view class="index-module proShows-two">
+	 		<nav class="publicContainer">
+		 		<block wx:for="{{proUrls.topicUrl}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item}}"></image>
+		 			</li>
+		 		</block>
+	 		</nav>
+	 	</view>
+	</scroll-view>
+</view>

@@ -1,0 +1,122 @@
+<!--me.wxml-->
+
+
+	
+
+<view class="container log-list publicContainer">
+	
+
+	<view class="me-top publicContainer">
+		<view class="me-top-left">
+			<view class="tianhongIcon">
+				<image src="{{iconUrls[0]}}" mode="aspectFit"></image>
+			</view>
+			<view>
+				<p>的店铺</p>
+				<p>老板，你赚了钱</p>
+			</view>
+		</view>
+		<view class="me-more">
+			<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+		</view>
+	</view>
+
+	<view class="me-modle orders me-title publicContainer">
+		<view class="me-modle-til">
+			<image src="{{iconUrls[2]}}" mode="aspectFit"></image>
+			<text>我的订单</text>
+		</view>
+		<view class="me-more">
+			<text>查看全部订单</text>
+			<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+		</view>
+	</view>
+
+	<view class="state container publicContainer">
+		<nav class="publicContainer">
+			<li>
+				<image src="{{iconUrls[3]}}"></image>
+				<text>待付款</text>
+			</li>
+			<li>
+				<image src="{{iconUrls[4]}}"></image>
+				<text>待收货</text>
+			</li>
+			<li>
+				<image src="{{iconUrls[5]}}"></image>
+				<text>退换货</text>
+			</li>
+			<li>
+				<image src="{{iconUrls[6]}}"></image>
+				<text>已完成</text>
+			</li>
+		</nav>
+	</view>
+
+	<view class="me-modle me-title publicContainer">
+		<view class="me-modle-til">
+			<image src="{{iconUrls[7]}}" mode="aspectFit"></image>
+			<text>我的团购</text>
+		</view>
+		<view class="me-more">
+			<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+		</view>
+	</view>
+
+	<view class="three-me-modle">
+		<view class="me-modle me-title publicContainer">
+			<view class="me-modle-til">
+				<image src="{{iconUrls[8]}}" mode="aspectFit"></image>
+				<text>数据纵横</text>
+			</view>
+			<view class="me-more">
+				<text>排名、统计</text>
+				<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+			</view>
+		</view>
+
+		<view class="me-modle me-title publicContainer">
+			<view class="me-modle-til">
+				<image src="{{iconUrls[9]}}" mode="aspectFit"></image>
+				<text>我的二维码</text>
+			</view>
+			<view class="me-more">
+				<text>分享店铺</text>
+				<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+			</view>
+		</view>
+
+		<view class="me-modle me-title publicContainer">
+			<view class="me-modle-til">
+				<image src="{{iconUrls[10]}}" mode="aspectFit"></image>
+				<text>我的团购</text>
+			</view>
+			<view class="me-more">
+				<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+			</view>
+		</view>
+	</view>
+
+	<view class="two-me-modle">
+		<view class="me-modle me-title publicContainer">
+			<view class="me-modle-til">
+				<image src="{{iconUrls[8]}}" mode="aspectFit"></image>
+				<text>地址管理</text>
+			</view>
+			<view class="me-more">
+				<text>收货信息维护</text>
+				<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+			</view>
+		</view>
+
+		<view class="me-modle me-title publicContainer">
+			<view class="me-modle-til">
+				<image src="{{iconUrls[9]}}" mode="aspectFit"></image>
+				<text>个人资料</text>
+			</view>
+			<view class="me-more">
+				<image src="{{iconUrls[1]}}" mode="aspectFill"></image>
+			</view>
+		</view>
+	</view>
+</view>
