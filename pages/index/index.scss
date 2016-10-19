@@ -15,6 +15,30 @@ page{
 	box-sizing: border-box;
 }
 
+@mixin proShow($h){
+	height: $h;
+	li{
+		flex: 1;
+		padding: 10px;
+		padding-right: 0;
+		height: 100%;
+		image{
+			width: 100%;
+			height: 100%;
+		}
+		&:last-child{
+			padding-right: 10px;
+		}
+	}
+}
+
+@mixin tab_head($justify-content){
+	justify-content: $justify-content;
+	align-items: center;
+	height: 36px;
+	padding: 0 10px;
+	align-items: center;
+}
 /*---------------scroll-view-----------------------*/
 
 #main_scroll{
@@ -65,8 +89,8 @@ page{
 		justify-content: space-around;
 		height: 100%;
 		image{
-			width: 50px;
-			height: 50px;
+			width: 68px;
+			height: 68px;
 		}
 		text{
 			font-size: 12px;
@@ -74,32 +98,157 @@ page{
 	}
 }
 
+
+
+
 /*---------------partener-----------------------*/
 
 .partener nav{
-	height: 140px;
-	li{
-		flex: 1;
-		padding: 10px;
-		height: 100%;
-		image{
-			width: 100%;
-			height: 100%;
-		}
-	}
+	@include proShow(140px);
 }
 
 /*---------------proShows-two-----------------------*/
 
 .proShows-two nav{
-	height: 180px;
+	@include proShow(180px);
+}
+
+/*---------------proShows-one-----------------------*/
+
+.proShows-one{
+	background: transparent;
+	nav{
+		width: 100%;
+		flex-direction: column;
+		li{
+			width: 100%;
+			height: 140px;
+			padding: 10px;
+			margin-bottom: 10px;
+			background: #FFF;
+			image{
+				width: 100%;
+				height: 100%;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/*---------------tab_head-----------------------*/
+
+.tab_head{
+	@include tab_head(space-between);
+	view{
+		align-items: center;
+		image{
+			width: 6px;
+			height: 14px;
+			padding-right: 4px;
+		}
+		text{
+			padding-right: 6px;
+		}
+	}
+}
+.theme1_2 nav{
+	@include proShow(220px);
+}
+
+/*---------------tab_head_choice-----------------------*/
+
+.tab_head_choice nav{
+	@include tab_head(space-around);
+	flex: 1;
 	li{
 		flex: 1;
+		height: 36px;
+		text-align: center;
+		a{
+			line-height: 35px;
+		}
+	}
+	.active_choice{
+		border-bottom: 1px solid #ff3c64;
+		a{
+			color: #ff3c64;
+		}
+	}
+}
+
+
+/*---------------proData-----------------------*/
+
+.proData{
+	flex-direction: column;
+	background: transparent;
+	.proItem{
+		width: 100%;
+		height: 150px;
 		padding: 10px;
-		height: 100%;
-		image{
-			width: 100%;
+		margin-bottom: 10px;
+		background: #FFF;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		.proImg{
+			flex: 3;
 			height: 100%;
+			padding-right: 10px;
+			image{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.productInfo{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			flex: 5;
+			height: 100%;
+			.proTil{
+				font-size: 15px;
+			}
+			.priceInfo{
+				width: 100%;
+				justify-content: space-between;
+				view:last-child{
+					flex-direction: column;
+					text{
+						color: #303030;
+						font-size: 16px;
+						padding-bottom: 6px;
+					}
+					del{
+						text-decoration: line-through;
+						color: #919191;
+						font-size: 12px;
+					}
+				}
+				view:first-child{
+					flex-direction: row;
+					align-items: center;
+					font-size: 30px;
+					color: #ff3c64;
+					image{
+						width: 40px;
+						height: 40px;
+						padding-right: 8px;
+					}
+				}
+			}
+			.join{
+				justify-content: space-around;
+				width: 100%;
+				padding: 2px 0;
+				font-size: 12px;
+				color: #ff6a88;
+				border: 1px solid #ff6a88;
+				border-radius: 10px;
+			}
 		}
 	}
 }

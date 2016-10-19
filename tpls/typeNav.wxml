@@ -1,0 +1,13 @@
+
+<template name="typeItems">
+  <view class="index-module typeNav">
+  	<nav class="publicContainer">
+  		<block wx:for="{{homeinit.Hashdata.category}}">
+  			<li class="publicContainer">
+  				<image src="{{item.categoryImg}}"></image>
+  				<text>{{item.categoryName}}</text>
+  			</li>
+  		</block>
+  	</nav>
+  </view>
+</template>

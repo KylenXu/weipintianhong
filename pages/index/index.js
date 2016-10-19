@@ -1,4 +1,5 @@
 // index.js
+
 Page({
   data: {
     loadingHidden: true,
@@ -48,7 +49,8 @@ Page({
   onLoad: function () {
     var _this = this;
     wx.request({
-      url: 'http://localhost/mock/homeinit.json',
+      // url: 'http://localhost/mock/homeinit.json',
+      url: 'http://kylen8036.applinzi.com/index.php',
       header:{
         "Content-Type":"application/json"
       },

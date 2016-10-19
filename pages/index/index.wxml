@@ -1,4 +1,7 @@
 <!-- idnex.wxml -->
+<import src="../../tpls/typeNav.wxml"/>
+<import src="../../tpls/tab_head.wxml"/>
+<import src="../../tpls/proInfo.wxml"/>
 <view class="container">
 	<!-- <loading hidden="{{loadingHidden}}" bindtap="loadingChange">
 	    加载中...
@@ -21,35 +24,124 @@
 		 	</view>
 	 	</view>	
 
-	 	<view class="index-module typeNav">
+	 	<!-- <view class="index-module typeNav">
 	 		<nav class="publicContainer">
-		 		<block wx:for="{{typeNav}}">
+		 		<block wx:for="{{homeinit.Hashdata.category}}">
 		 			<li class="publicContainer">
-		 				<image src="{{item.typeImgUrl}}"></image>
-		 				<text>{{item.typeTil}}</text>
+		 				<image src="{{item.categoryImg}}"></image>
+		 				<text>{{item.categoryName}}</text>
 		 			</li>
 		 		</block>
 	 		</nav>
-	 	</view>
+	 	</view> -->
+
+	 	<!-- 不知为何这种方式不管用 -->
+	 	<!-- <include src="typeNav.wxml"/> -->
+
+	 	<template is="typeItems" data="{{homeinit}}"/>
 
 	 	<view class="index-module partener">
 	 		<nav class="publicContainer">
-		 		<block wx:for="{{proUrls.partenerUrl}}">
+		 		<block wx:for="{{homeinit.Layouts[3].LayoutItems}}">
 		 			<li class="publicContainer">
-		 				<image src="{{item}}"></image>
-		 			</li>
-		 		</block>
-	 		</nav>
-	 	</view>d
-
-	 	<view class="index-module proShows-two">
-	 		<nav class="publicContainer">
-		 		<block wx:for="{{proUrls.topicUrl}}">
-		 			<li class="publicContainer">
-		 				<image src="{{item}}"></image>
+		 				<image src="{{item.Img_url}}"></image>
 		 			</li>
 		 		</block>
 	 		</nav>
 	 	</view>
+
+	 	<view class="index-module proShows-two">
+	 		<nav class="publicContainer">
+		 		<block wx:for="{{homeinit.Layouts[4].LayoutItems}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.Img_url}}"></image>
+		 			</li>
+		 		</block>
+	 		</nav>
+	 	</view>
+
+	 	<view class="index-module proShows-one">
+	 		<nav class="publicContainer">
+		 		<block wx:for="{{homeinit.Layouts[5].LayoutItems}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.Img_url}}"></image>
+		 			</li>
+		 		</block>
+		 		<block wx:for="{{homeinit.Layouts[6].LayoutItems}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.Img_url}}"></image>
+		 			</li>
+		 		</block>
+		 		<block wx:for="{{homeinit.Layouts[7].LayoutItems}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.Img_url}}"></image>
+		 			</li>
+		 		</block>
+		 		<block wx:for="{{homeinit.Layouts[8].LayoutItems}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.Img_url}}"></image>
+		 			</li>
+		 		</block>
+	 		</nav>
+	 	</view>
+
+	 	<view class="index-module tab_head publicContainer">
+	 		<view class="publicContainer">
+	 			<image mode="aspectFit" src="/images/ic_mark_red.png"></image>
+	 			<text>好货好品好生活</text>
+	 		</view>	
+	 		<view class="publicContainer">
+	 			<text>更多</text>
+	 			<image src="/images/ic_in_g.png"></image>
+	 		</view>	
+	 	</view>
+
+	 	<view class="index-module theme1_2">
+	 		<nav class="publicContainer">
+		 		<block wx:for="{{homeinit.Layouts[10].LayoutItems}}">
+		 			<li class="publicContainer">
+		 				<image src="{{item.Img_url}}"></image>
+		 			</li>
+		 		</block>
+	 		</nav>
+	 	</view>
+
+	 	<!-- <view class="index-module tab_head_choice publicContainer">
+	 		<nav class="publicContainer">
+	 			<li class="active_choice"><a href="#">最新</a></li>
+	 			<li><a href="#">销量</a></li>
+	 			<li><a href="#">返利</a></li>
+	 			<li><a href="#">价格</a></li>
+	 		</nav>
+	 	</view> -->
+	 	<template is="tab_head"/>
+
+	 	<!-- <view class="index-module proData publicContainer">
+	 		<block wx:for="{{homeinit.Hashdata.recommend}}" wx:for-index="i">
+	 			<view wx:if="{{i<5}}" class="proItem publicContainer">
+		 			<view class="proImg">
+		 				<image src="{{item.share[0].img}}"></image>
+		 			</view>
+		 			<view class="productInfo publicContainer">
+		 				<text class="proTil">{{item.productName}}</text>
+		 				<view class="publicContainer priceInfo">
+		 					<view class="rebates publicContainer">
+		 						<image src="/images/ic_money_z.png"></image>
+		 						<text>{{item.rebates}}</text>
+		 					</view>
+		 					<view class="publicContainer">
+		 						<text>￥{{item.productPrice}}</text>
+		 						<del>￥{{item.marketprice}}</del>
+		 					</view>
+		 				</view>
+		 				<a href="#" class="join publicContainer">加入店铺</a>
+		 			</view>
+		 		</view>
+	 		</block>
+	 	</view> -->
+
+	 	<template is="proInfo" data="{{homeinit}}"/>
+
+
 	</scroll-view>
 </view>

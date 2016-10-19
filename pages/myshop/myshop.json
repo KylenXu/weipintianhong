@@ -1,3 +1,5 @@
 {
-    "navigationBarTitleText": "查看启动日志"
+    "navigationBarTitleText": "我的店铺",
+   	"navigationBarTitleTextColor": "white",
+    "navigationBarBackgroundColor": "#e9375b"
 }

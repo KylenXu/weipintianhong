@@ -1,0 +1,10 @@
+<template name="tab_head">
+	<view class="index-module tab_head_choice publicContainer">
+		<nav class="publicContainer">
+			<li class="active_choice"><a href="#">最新</a></li>
+			<li><a href="#">销量</a></li>
+			<li><a href="#">返利</a></li>
+			<li><a href="#">价格</a></li>
+		</nav>
+	</view>
+</template>

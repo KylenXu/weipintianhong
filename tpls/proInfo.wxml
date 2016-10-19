@@ -1,0 +1,25 @@
+<template name="proInfo">
+ 	<view class="index-module proData publicContainer">
+ 		<block wx:for="{{homeinit.Hashdata.recommend}}" wx:for-index="i">
+ 			<view wx:if="{{i<5}}" class="proItem publicContainer">
+	 			<view class="proImg">
+	 				<image src="{{item.share[0].img}}"></image>
+	 			</view>
+	 			<view class="productInfo publicContainer">
+	 				<text class="proTil">{{item.productName}}</text>
+	 				<view class="publicContainer priceInfo">
+	 					<view class="rebates publicContainer">
+	 						<image src="/images/ic_money_z.png"></image>
+	 						<text>{{item.rebates}}</text>
+	 					</view>
+	 					<view class="publicContainer">
+	 						<text>￥{{item.productPrice}}</text>
+	 						<del>￥{{item.marketprice}}</del>
+	 					</view>
+	 				</view>
+	 				<a href="#" class="join publicContainer">加入店铺</a>
+	 			</view>
+	 		</view>
+ 		</block>
+ 	</view>
+ </template>

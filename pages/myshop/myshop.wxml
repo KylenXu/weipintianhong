@@ -1,7 +1,28 @@
 <!--myshop.wxml-->
 
-<import src="/tpls/signin.wxml" />
+<import src="../../tpls/typeNav.wxml"/>
+<import src="../../tpls/tab_head.wxml"/>
+<import src="../../tpls/proInfo.wxml"/>
+<view class="container">
+	<!-- <loading hidden="{{loadingHidden}}" bindtap="loadingChange">
+	    加载中...
+	</loading> -->
+	<scroll-view scroll-y="true" id="main_scroll" class="container publicContainer"   bindscrolltoupper="actionToupper" bindscrolltolower="actionTolower" upper-threshold="{{scroll[upper-threshold]}}" lower-threshold="{{scroll['lower-threshold']}">
+		
+		<view class="myShop-top publicContainer">
+			<view class="topImg publicContainer">
+				<view><image src="{{userImg}}"></image></view>
+			</view>
+			<text>一切随风</text>
+			<text>天虹品质 货真价实 诚实经营</text>
+		</view>
 
-<template is="signItem" data="{{signinHide, ...userinfo}}" />
+	 	<template is="typeItems" data="{{homeinit}}"/>
 
-<view>signItem</view>
+	 	<template is="tab_head"/>
+	 	
+	 	<template is="proInfo" data="{{homeinit}}"/>
+		
+		
+	</scroll-view>
+</view>

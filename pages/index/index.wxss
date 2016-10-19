@@ -53,8 +53,8 @@ page {
     justify-content: space-around;
     height: 100%; }
     .typeNav nav li image {
-      width: 50px;
-      height: 50px; }
+      width: 68px;
+      height: 68px; }
     .typeNav nav li text {
       font-size: 12px; }
 
@@ -64,10 +64,13 @@ page {
   .partener nav li {
     flex: 1;
     padding: 10px;
+    padding-right: 0;
     height: 100%; }
     .partener nav li image {
       width: 100%;
       height: 100%; }
+    .partener nav li:last-child {
+      padding-right: 10px; }
 
 /*---------------proShows-two-----------------------*/
 .proShows-two nav {
@@ -75,7 +78,135 @@ page {
   .proShows-two nav li {
     flex: 1;
     padding: 10px;
+    padding-right: 0;
     height: 100%; }
     .proShows-two nav li image {
       width: 100%;
       height: 100%; }
+    .proShows-two nav li:last-child {
+      padding-right: 10px; }
+
+/*---------------proShows-one-----------------------*/
+.proShows-one {
+  background: transparent; }
+  .proShows-one nav {
+    width: 100%;
+    flex-direction: column; }
+    .proShows-one nav li {
+      width: 100%;
+      height: 140px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #FFF; }
+      .proShows-one nav li image {
+        width: 100%;
+        height: 100%; }
+      .proShows-one nav li:last-child {
+        margin-bottom: 0; }
+
+/*---------------tab_head-----------------------*/
+.tab_head {
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  padding: 0 10px;
+  align-items: center; }
+  .tab_head view {
+    align-items: center; }
+    .tab_head view image {
+      width: 6px;
+      height: 14px;
+      padding-right: 4px; }
+    .tab_head view text {
+      padding-right: 6px; }
+
+.theme1_2 nav {
+  height: 220px; }
+  .theme1_2 nav li {
+    flex: 1;
+    padding: 10px;
+    padding-right: 0;
+    height: 100%; }
+    .theme1_2 nav li image {
+      width: 100%;
+      height: 100%; }
+    .theme1_2 nav li:last-child {
+      padding-right: 10px; }
+
+/*---------------tab_head_choice-----------------------*/
+.tab_head_choice nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 36px;
+  padding: 0 10px;
+  align-items: center;
+  flex: 1; }
+  .tab_head_choice nav li {
+    flex: 1;
+    height: 36px;
+    text-align: center; }
+    .tab_head_choice nav li a {
+      line-height: 35px; }
+  .tab_head_choice nav .active_choice {
+    border-bottom: 1px solid #ff3c64; }
+    .tab_head_choice nav .active_choice a {
+      color: #ff3c64; }
+
+/*---------------proData-----------------------*/
+.proData {
+  flex-direction: column;
+  background: transparent; }
+  .proData .proItem {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #FFF; }
+    .proData .proItem:last-child {
+      margin-bottom: 0; }
+    .proData .proItem .proImg {
+      flex: 3;
+      height: 100%;
+      padding-right: 10px; }
+      .proData .proItem .proImg image {
+        width: 100%;
+        height: 100%; }
+    .proData .proItem .productInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex: 5;
+      height: 100%; }
+      .proData .proItem .productInfo .proTil {
+        font-size: 15px; }
+      .proData .proItem .productInfo .priceInfo {
+        width: 100%;
+        justify-content: space-between; }
+        .proData .proItem .productInfo .priceInfo view:last-child {
+          flex-direction: column; }
+          .proData .proItem .productInfo .priceInfo view:last-child text {
+            color: #303030;
+            font-size: 16px;
+            padding-bottom: 6px; }
+          .proData .proItem .productInfo .priceInfo view:last-child del {
+            text-decoration: line-through;
+            color: #919191;
+            font-size: 12px; }
+        .proData .proItem .productInfo .priceInfo view:first-child {
+          flex-direction: row;
+          align-items: center;
+          font-size: 30px;
+          color: #ff3c64; }
+          .proData .proItem .productInfo .priceInfo view:first-child image {
+            width: 40px;
+            height: 40px;
+            padding-right: 8px; }
+      .proData .proItem .productInfo .join {
+        justify-content: space-around;
+        width: 100%;
+        padding: 2px 0;
+        font-size: 12px;
+        color: #ff6a88;
+        border: 1px solid #ff6a88;
+        border-radius: 10px; }
